@@ -8,6 +8,11 @@ Rails.application.routes.draw do
     sessions: 'users/sessions',
     registrations: 'users/registrations'
   }
+
+  resources :users, only: [:index, :show] do
+    resources :lists
+  end
+
   resources :lists
   resources :tasks
 end
