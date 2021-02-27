@@ -15,6 +15,14 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :users, only: [:index, :show] do 
+    resources :tasks
+  end
+
+  resources :lists do 
+    resources :tasks
+  end
+
   resources :lists
   resources :tasks
 end
