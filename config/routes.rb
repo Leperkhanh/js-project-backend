@@ -10,7 +10,9 @@ Rails.application.routes.draw do
   }
 
   resources :users, only: [:index, :show] do
-    resources :lists
+    resources :lists do 
+      resources :tasks
+    end
   end
 
   resources :lists
