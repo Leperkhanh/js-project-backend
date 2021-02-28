@@ -3,7 +3,7 @@ class ListsController < ApplicationController
         user = User.find_by(id: params[:user_id])
         if user 
             lists = user.lists 
-            render json: lists
+            render json: ListSerializer.new(lists)
         else 
             lists = List.all
             render json: lists   
