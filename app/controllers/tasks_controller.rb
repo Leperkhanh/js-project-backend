@@ -3,10 +3,10 @@ class TasksController < ApplicationController
         user = User.find_by(id: params[:user_id])
         if user 
             tasks = user.tasks 
-            render json: tasks
+            render json: TaskSerializer.new(tasks)
         else
             tasks = Task.all 
-            render json: tasks
+            render json: TaskSerializer.new(tasks)
         end
     end
 
@@ -15,10 +15,10 @@ class TasksController < ApplicationController
         if user 
             task = Task.find_by(id: params[:id])
             list = task.list
-            render json: task
+            render json: TaskSerializer.new(task)
         else
             task = Task.find_by(id: params[:id])
-            render json: task    
+            render json: TaskSerializer.new(task)    
         end
     end
 end
