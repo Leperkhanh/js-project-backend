@@ -6,7 +6,7 @@ class ListsController < ApplicationController
             render json: ListSerializer.new(lists)
         else 
             lists = List.all
-            render json: lists   
+            render json: ListSerializer.new(lists)   
         end
     end
 
@@ -15,10 +15,10 @@ class ListsController < ApplicationController
         if user 
             user = User.find_by(id: params[:user_id])
             list = List.find_by(id: params[:id])
-            render json: list
+            render json: ListSerializer.new(list)
         else
             list = List.find_by(id: params[:id])
-            render json: list       
+            render json: ListSerializer.new(list)      
         end
     end
     
