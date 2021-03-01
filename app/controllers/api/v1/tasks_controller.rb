@@ -1,4 +1,4 @@
-class TasksController < ApplicationController
+class Api::V1::TasksController < ApplicationController
     def index 
         user = User.find_by(id: params[:user_id])
         if user 
