@@ -21,5 +21,14 @@ class Api::V1::ListsController < ApplicationController
             render json: ListSerializer.new(list)      
         end
     end
+
+    def create 
+        list = List.new(list_params)
+        if list.save 
+            render json: ListSerializer.new(list), status: :accepted
+        else
+            render json: {errors: list.errors.full_messages}, status: :unaccepted         
+        end
+    end
     
 end
