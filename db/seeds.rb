@@ -1,3 +1,7 @@
+User.destroy_all
+List.destroy_all
+Task.destroy_all
+
 user = User.create(email: "test@test.com", password: "password")
 user2 = User.create(email: "email@email.com", password: "password")
 
