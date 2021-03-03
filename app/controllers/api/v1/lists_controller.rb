@@ -28,7 +28,7 @@ class Api::V1::ListsController < ApplicationController
         if list.save 
             render json: ListSerializer.new(list), status: :accepted
         else
-            render json: {errors: list.errors.full_messages}, status: :unprocessible_entity        
+            render json: {errors: list.errors.full_messages}, status: :unprocessable_entity        
         end
     end
 
