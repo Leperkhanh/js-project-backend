@@ -35,9 +35,10 @@ class Api::V1::ListsController < ApplicationController
     def destroy
         lists = List.all
         list = List.find_by(id: params[:id])
+        list.destroy
         if list.destroy
             flash[:success] = 'List was successfully deleted.'
-            rendor json: ListSerializer.new(lists)
+            render json: ListSerializer.new(lists)
         else
             flash[:error] = 'Something went wrong'
             rendor json: ListSerializer.new(lists)
