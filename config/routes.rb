@@ -19,6 +19,14 @@ Rails.application.routes.draw do
     resources :tasks
   end
 
+  namespace :api do 
+    namespace :v1 do 
+      resources :lists do
+        resources :tasks
+    end
+  end
+end
+
   resources :lists do 
     resources :tasks
   end

@@ -1,7 +1,7 @@
 class Api::V1::TasksController < ApplicationController
     def index 
         user = User.find_by(id: params[:user_id])
-        if user 
+        if user
             tasks = user.tasks 
             render json: TaskSerializer.new(tasks)
         else
@@ -20,5 +20,21 @@ class Api::V1::TasksController < ApplicationController
             task = Task.find_by(id: params[:id])
             render json: TaskSerializer.new(task)    
         end
+    end
+
+    def create 
+        task = Task.new(task_params)
+        task.user = current_user
+        if task.save 
+            render json: TaskSerializer.new(task), status: :accepted
+        else
+            render json: {errors: task.errors.full_messages}, status: :unprocessable_entity        
+        end
+    end
+
+    private 
+
+    def task_params 
+        params.require(:task).permit(:body, :list_id)
     end
 end
