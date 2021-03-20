@@ -22,7 +22,7 @@ $ rails s
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/Leperkhanh/js-project-frontend
+Bug reports and pull requests are welcome on GitHub at https://github.com/Leperkhanh/js-project-backend
 
 ## License
 
