@@ -26,4 +26,4 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/Leperk
 
 ## License
 
-https://github.com/Leperkhanh/rails-BednBreakfast/blob/main/LICENSE
+https://github.com/Leperkhanh/js-project-backend/blob/main/License
