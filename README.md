@@ -1,24 +1,29 @@
-# README
+# MustDos
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Welcome to the MustDos where a user can create a todo list and create task for each list to remind themselves of what needs to be done.
 
-Things you may want to cover:
+## Frontend Repo
 
-* Ruby version
+Clone frontend repo to be able to run with this backend.
 
-* System dependencies
+https://github.com/Leperkhanh/js-project-frontend
 
-* Configuration
+## Development
 
-* Database creation
+Make sure to run all steps to create new credentials keys and install all dependencies. The last command is to run a running backend server.
 
-* Database initialization
+```ruby
+$ EDITOR="code --wait" rails credentials:edit
+$ bundle install
+$ rails db:create && rails db:migrate
+$ rails db:seed
+$ rails s
+```
 
-* How to run the test suite
+## Contributing
 
-* Services (job queues, cache servers, search engines, etc.)
+Bug reports and pull requests are welcome on GitHub at https://github.com/Leperkhanh/js-project-frontend
 
-* Deployment instructions
+## License
 
-* ...
+https://github.com/Leperkhanh/rails-BednBreakfast/blob/main/LICENSE
