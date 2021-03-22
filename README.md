@@ -8,8 +8,6 @@ Clone frontend repo to be able to run with this backend.
 
 https://github.com/Leperkhanh/js-project-frontend
 
-## Development
-
 Make sure to run all steps to create new credentials keys and install all dependencies. The last command is to run a running backend server.
 
 ```ruby
